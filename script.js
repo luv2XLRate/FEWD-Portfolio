@@ -1,5 +1,6 @@
-  <script>
-    $(document).ready(function() {
+'use strict';
+
+  $(document).ready(function() {
         function filterPath(string) {
         return string
           .replace(/^\//,'')
@@ -25,4 +26,4 @@
     }
   });
 });
-  </script>
+  
