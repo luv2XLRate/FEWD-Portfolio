@@ -7,15 +7,15 @@
           .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
           .replace(/\/$/,'');
         }
-        var locationPath = filterPath(location.pathname);
+        let locationPath = filterPath(location.pathname);
         $('a[href*=#]').each(function() {
-          var thisPath = filterPath(this.pathname) || locationPath;
+          let thisPath = filterPath(this.pathname) || locationPath;
           if (  locationPath == thisPath
           && (location.hostname == this.hostname || !this.hostname)
           && this.hash.replace(/#/,'') ) {
-            var $target = $(this.hash), target = this.hash;
+            let $target = $(this.hash), target = this.hash;
             if (target) {
-              var targetOffset = $target.offset().top;
+              let targetOffset = $target.offset().top;
               $(this).click(function(event) {
                 event.preventDefault();
                 $('html, body').animate({scrollTop: targetOffset}, 400, function() {
